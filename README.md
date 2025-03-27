@@ -1,5 +1,18 @@
 # Setting Up Red Hat Quay POC Registry Using Podman in Rootless Mode on RHEL 9
 
+## Why Quay?
+
+Red Hat Quay is a powerful, open-source container registry with a robust solution for storing, building, and distributing container images. Whether you're setting up a home lab, testing in an enterprise environment, or developing applications, Quay offers several compelling advantages:
+
+- **Fully open-source**: The Project Quay upstream version is entirely open source, making it perfect for home labs and testing environments
+- **Enterprise-grade security**: Built-in vulnerability scanning, image signing, and access controls
+- **Powerful build system**: Automated container builds triggered by git commits
+- **Efficient storage**: Configurable storage backends with content deduplication
+- **Rich API support**: Comprehensive API for automation and integration
+- **High availability**: Designed for redundancy and horizontal scaling (in production deployments)
+
+Quay is an excellent choice for developers and organizations who need more control and features than basic registries provide, without the overhead of commercial solutions.
+
 > **Note:** This guide is only for Proof of Concept (POC) deployments. It is not intended for production use.
 
 ## Prerequisites
@@ -32,7 +45,7 @@ sudo dnf update -y
 
 ## Step 2: Install Podman
 
-Install Podman and required packages for rootless mode:
+Install Podman and the required packages for rootless mode:
 
 ```bash
 # Install podman and rootless dependencies
@@ -82,7 +95,7 @@ podman network create quay-network
 podman network ls
 ```
 
-## Step 5: Deploy PostgreSQL Database
+## Step 5: Deploy the PostgreSQL Database
 
 Create a podman volume for the PostgreSQL data:
 
