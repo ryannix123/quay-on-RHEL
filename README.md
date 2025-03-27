@@ -1,11 +1,11 @@
-# Setting Up Red Hat Quay POC Registry Using Podman in Rootless Mode on RHEL 9
+# Setting Up a Red Hat Quay POC Registry Using Podman in Rootless Mode on RHEL 9
 
 ## Why Quay?
 
-Red Hat Quay is a powerful, open-source container registry with a robust solution for storing, building, and distributing container images. Whether you're setting up a home lab, testing in an enterprise environment, or developing applications, Quay offers several compelling advantages:
+Red Hat Quay is a powerful, open-source container registry. It's a robust solution for storing, building, and distributing container images. Whether you're setting up a home lab, testing in an enterprise environment, or developing applications, Quay offers several compelling advantages:
 
 - **Fully open-source**: The Project Quay upstream version is entirely open source, making it perfect for home labs and testing environments
-- **Enterprise-grade security**: Built-in vulnerability scanning, image signing, and access controls
+- **Enterprise-grade security**: Built-in vulnerability scanning through Clair, image signing, and access controls
 - **Powerful build system**: Automated container builds triggered by git commits
 - **Efficient storage**: Configurable storage backends with content deduplication
 - **Rich API support**: Comprehensive API for automation and integration
